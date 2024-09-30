@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Application\FirstApp.hpp" />
+    <ClInclude Include="Sources\Window\LightBoltWindow.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\.EntryPoint\Main.cpp" />
+    <ClCompile Include="Sources\Application\FirstApp.cpp" />
+    <ClCompile Include="Sources\Window\LightBoltWindow.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -142,9 +151,6 @@
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Sources\VulkanTest.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
