@@ -19,13 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sources\Application\FirstApp.hpp" />
-    <ClInclude Include="Sources\Window\LightBoltWindow.hpp" />
+    <ClInclude Include="Sources\Applications\FirstApp.hpp" />
+    <ClInclude Include="Sources\LB_pipeline.hpp" />
+    <ClInclude Include="Sources\Windows\LightBoltWindow.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\.EntryPoint\Main.cpp" />
-    <ClCompile Include="Sources\Application\FirstApp.cpp" />
-    <ClCompile Include="Sources\Window\LightBoltWindow.cpp" />
+    <ClCompile Include="Sources\Applications\FirstApp.cpp" />
+    <ClCompile Include="Sources\LB_pipeline.cpp" />
+    <ClCompile Include="Sources\Windows\LightBoltWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sources\compileShaders.bat" />
+    <None Include="Sources\Shaders\simple_shader.frag" />
+    <None Include="Sources\Shaders\simple_shader.vert" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
