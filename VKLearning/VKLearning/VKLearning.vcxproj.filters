@@ -13,24 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Window">
+      <UniqueIdentifier>{9e083793-eaf9-4432-93fc-4f50fbad5616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Application">
+      <UniqueIdentifier>{747623c1-ab67-4546-b0ff-b2cfcc401d6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\.EntryPoint">
+      <UniqueIdentifier>{b0f3b996-e95d-47fb-8045-dbaa16cdfa13}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sources\Window\LightBoltWindow.hpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Window</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Application\FirstApp.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Application</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sources\Window\LightBoltWindow.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Sources\.EntryPoint\Main.cpp">
+      <Filter>Source Files\.EntryPoint</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Application\FirstApp.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Application</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\.EntryPoint\Main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Sources\Window\LightBoltWindow.cpp">
+      <Filter>Source Files\Window</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
