@@ -16,7 +16,7 @@ namespace LB
 
 	private :
 		LBWindow lbWindow{ Width, Height, "Vulkan" }; 
-		LBPipeline lbPipeline{"../../VKLearning/Sources/Shaders/simple_shader.vert.spv", "../../VKLearning/Sources/Shaders/simple_shader.frag.spv" };
+		LBPipeline lbPipeline{"../Ressources/Shaders/simple_shader.vert.spv", "../Ressources/Shaders/simple_shader.frag.spv" };
 	};
 }
 
