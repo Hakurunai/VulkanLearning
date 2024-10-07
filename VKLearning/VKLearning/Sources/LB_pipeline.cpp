@@ -7,9 +7,16 @@
 
 namespace LB
 {
-	LBPipeline::LBPipeline(const std::string& vertFilePath, const std::string& fragFilePath)
+	LBPipeline::LBPipeline(LBDevice& device, const std::string& vertFilePath, const std::string& fragFilePath, const PipelineConfigInfo& configInfo)
+		: lbDevice(device)
 	{
-		CreateGraphicsPipeline(vertFilePath, fragFilePath);
+		CreateGraphicsPipeline(vertFilePath, fragFilePath, configInfo);
+	}
+
+	PipelineConfigInfo LBPipeline::DefaultPipelineConfigInfo(uint32_t width, uint32_t height)
+	{
+		PipelineConfigInfo configInfo{};
+		return configInfo;
 	}
 
 	std::vector<char> LBPipeline::ReadFile(const std::string& filePath)
@@ -27,7 +34,7 @@ namespace LB
 		return buffer;
 	}
 
-	void LBPipeline::CreateGraphicsPipeline(const std::string& vertFilePath, const std::string& fragFilePath)
+	void LBPipeline::CreateGraphicsPipeline(const std::string& vertFilePath, const std::string& fragFilePath, const PipelineConfigInfo& configInfo)
 	{
 		auto vertCode = ReadFile(vertFilePath);
 		auto fragCode = ReadFile(fragFilePath);
@@ -35,5 +42,15 @@ namespace LB
 		std::cout << "Vertex shader code size : " << vertCode.size() << "\n";
 		std::cout << "Fragment shader code size : " << fragCode.size() << "\n";
 		std::cout.flush();
+	}
+	void LBPipeline::CreateShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule)
+	{
+		VkShaderModuleCreateInfo createInfo{};
+		createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+		createInfo.codeSize = code.size();
+		createInfo.pCode = reinterpret_cast<const uint32_t*>(code.data());
+
+		if (vkCreateShaderModule(lbDevice.device(), &createInfo, nullptr, shaderModule) != VK_SUCCESS)
+			throw std::runtime_error("Failed to create shader module");
 	}
 }

@@ -8,15 +8,35 @@
 #include <vector>
 namespace LB
 {
+	struct PipelineConfigInfo
+	{
+
+	};
+
 	class LBPipeline
 	{
 	public:
-		LBPipeline(const std::string& vertFilePath, const std::string& fragFilePath);
+#pragma region CTOR
+		LBPipeline(LBDevice& device, const std::string& vertFilePath, const std::string& fragFilePath, const PipelineConfigInfo& configInfo);
+		~LBPipeline(){}
 
+		LBPipeline(const LBPipeline&) = delete;
+		void operator=(const LBPipeline&) = delete;
+#pragma endregion CTOR
+
+		static PipelineConfigInfo DefaultPipelineConfigInfo(uint32_t width, uint32_t height);
 	private:
 		static std::vector<char> ReadFile(const std::string& filePath);
 
-		void CreateGraphicsPipeline(const std::string& vertFilePath, const std::string& fragFilePath);
+		void CreateGraphicsPipeline(const std::string& vertFilePath, const std::string& fragFilePath, const PipelineConfigInfo& configInfo);
+
+		void CreateShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule);
+
+		//the device should exist to allow a pipeline to be
+		LBDevice& lbDevice;
+		VkPipeline graphicsPipeline;
+		VkShaderModule vertShaderModule;
+		VkShaderModule fragShaderModule;
 	};
 }
 #endif // !LB_PIPELINE__H
