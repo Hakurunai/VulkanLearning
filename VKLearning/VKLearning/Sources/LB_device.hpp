@@ -1,7 +1,7 @@
 #ifndef LB_DEVICE__H
 #define LB_DEVICE__H
 
-#include "Windows/LightBoltWindow.hpp"
+#include "Windows/LB_window.hpp"
 
 // std lib headers
 #include <string>

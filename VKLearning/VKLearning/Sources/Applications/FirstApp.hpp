@@ -1,7 +1,7 @@
 #ifndef FIRSTAPP__H
 #define FIRSTAPP__H
 
-#include "../Windows/LightBoltWindow.hpp"
+#include "../Windows/LB_window.hpp"
 #include "../LB_pipeline.hpp"
 
 namespace LB

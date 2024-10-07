@@ -1,6 +1,9 @@
 #ifndef LB_PIPELINE__H
 #define LB_PIPELINE__H
 
+#include "LB_device.hpp"
+
+//std
 #include <string>
 #include <vector>
 namespace LB
@@ -16,6 +19,4 @@ namespace LB
 		void CreateGraphicsPipeline(const std::string& vertFilePath, const std::string& fragFilePath);
 	};
 }
-
-
 #endif // !LB_PIPELINE__H

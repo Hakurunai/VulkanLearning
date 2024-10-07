@@ -1,4 +1,4 @@
-#include "LightBoltWindow.hpp"
+#include "LB_window.hpp"
 
 //std
 #include <stdexcept>

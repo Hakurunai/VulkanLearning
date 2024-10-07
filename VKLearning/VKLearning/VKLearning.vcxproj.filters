@@ -27,7 +27,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sources\Windows\LightBoltWindow.hpp">
+    <ClInclude Include="Sources\Windows\LB_window.hpp">
       <Filter>Source Files\Windows</Filter>
     </ClInclude>
     <ClInclude Include="Sources\Applications\FirstApp.hpp">
@@ -47,7 +47,7 @@
     <ClCompile Include="Sources\Applications\FirstApp.cpp">
       <Filter>Source Files\Applications</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Windows\LightBoltWindow.cpp">
+    <ClCompile Include="Sources\Windows\LB_window.cpp">
       <Filter>Source Files\Windows</Filter>
     </ClCompile>
     <ClCompile Include="Sources\LB_pipeline.cpp">
