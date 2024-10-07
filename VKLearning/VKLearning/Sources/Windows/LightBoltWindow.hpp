@@ -20,6 +20,7 @@ namespace LB
 #pragma endregion CTOR
 		__forceinline bool ShouldClose() const { return glfwWindowShouldClose(window); }
 
+		void CreateWindowSurface(VkInstance instance, VkSurfaceKHR* surface);
 	private :
 		void InitWindow();
 

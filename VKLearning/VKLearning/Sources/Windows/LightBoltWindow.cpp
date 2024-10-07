@@ -1,5 +1,8 @@
 #include "LightBoltWindow.hpp"
 
+//std
+#include <stdexcept>
+
 namespace LB
 {
 	LBWindow::LBWindow(const int Width, const int Height, const std::string Name) 
@@ -12,6 +15,12 @@ namespace LB
 	{
 		glfwDestroyWindow(window);
 		glfwTerminate();
+	}
+
+	void LBWindow::CreateWindowSurface(VkInstance instance, VkSurfaceKHR* surface)
+	{
+		if (glfwCreateWindowSurface(instance, window, nullptr, surface) != VK_SUCCESS)
+			throw std::runtime_error("Failed to create window surface");
 	}
 
 	void LBWindow::InitWindow()

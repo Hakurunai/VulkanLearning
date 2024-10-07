@@ -13,12 +13,14 @@
   <ItemGroup>
     <ClInclude Include="Sources\Applications\FirstApp.hpp" />
     <ClInclude Include="Sources\LB_pipeline.hpp" />
+    <ClInclude Include="Sources\LB_device.hpp" />
     <ClInclude Include="Sources\Windows\LightBoltWindow.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\.EntryPoint\Main.cpp" />
     <ClCompile Include="Sources\Applications\FirstApp.cpp" />
     <ClCompile Include="Sources\LB_pipeline.cpp" />
+    <ClCompile Include="Sources\LB_device.cpp" />
     <ClCompile Include="Sources\Windows\LightBoltWindow.cpp" />
   </ItemGroup>
   <ItemGroup>

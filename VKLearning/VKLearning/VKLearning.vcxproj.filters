@@ -34,7 +34,10 @@
       <Filter>Source Files\Applications</Filter>
     </ClInclude>
     <ClInclude Include="Sources\LB_pipeline.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\LB_device.hpp">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +53,9 @@
     <ClCompile Include="Sources\LB_pipeline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\LB_device.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Sources\Shaders\simple_shader.vert">
@@ -58,6 +64,8 @@
     <None Include="Sources\Shaders\simple_shader.frag">
       <Filter>Source Files\Shaders</Filter>
     </None>
-    <None Include="Sources\compileShaders.bat" />
+    <None Include="Sources\compileShaders.bat">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
